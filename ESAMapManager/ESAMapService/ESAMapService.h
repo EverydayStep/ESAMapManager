@@ -1,0 +1,21 @@
+//
+//  ESAMapService.h
+//  ESAMapManager
+//
+//  Created by codeLocker on 2017/8/1.
+//  Copyright © 2017年 codeLocker. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface ESAMapService : NSObject
+/**
+ 注册高德地图
+
+ @param key SDK key
+ */
++ (void)registerServiceKey:(NSString *)key;
+
+
+
+@end
