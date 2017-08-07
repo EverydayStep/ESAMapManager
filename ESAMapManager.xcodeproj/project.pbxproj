@@ -16,6 +16,7 @@
 		970952361F3055C7001899B7 /* ESAMapLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 970952351F3055C7001899B7 /* ESAMapLocationManager.m */; };
 		9709523A1F3056AE001899B7 /* ESAMapService.m in Sources */ = {isa = PBXBuildFile; fileRef = 970952391F3056AE001899B7 /* ESAMapService.m */; };
 		9748A8CB1F3082130043CC3F /* ESAMapPOIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9748A8CA1F3082130043CC3F /* ESAMapPOIManager.m */; };
+		978303E61F380C2600C87851 /* ESAMapWeatherManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 978303E51F380C2600C87851 /* ESAMapWeatherManager.m */; };
 		DCC2FD57790219D3AB15DD67 /* libPods-ESAMapManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E82E22FE74C30324B0B706 /* libPods-ESAMapManager.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		970952391F3056AE001899B7 /* ESAMapService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESAMapService.m; sourceTree = "<group>"; };
 		9748A8C91F3082130043CC3F /* ESAMapPOIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESAMapPOIManager.h; sourceTree = "<group>"; };
 		9748A8CA1F3082130043CC3F /* ESAMapPOIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESAMapPOIManager.m; sourceTree = "<group>"; };
+		978303E41F380C2600C87851 /* ESAMapWeatherManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESAMapWeatherManager.h; sourceTree = "<group>"; };
+		978303E51F380C2600C87851 /* ESAMapWeatherManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESAMapWeatherManager.m; sourceTree = "<group>"; };
 		BF973601609B057C8EAD0EBE /* Pods-ESAMapManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESAMapManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ESAMapManager/Pods-ESAMapManager.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E82E22FE74C30324B0B706 /* libPods-ESAMapManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ESAMapManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF720CE101634BC6CF9245B /* Pods-ESAMapManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ESAMapManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ESAMapManager/Pods-ESAMapManager.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		970952161F3051B3001899B7 /* ESAMapManager */ = {
 			isa = PBXGroup;
 			children = (
+				978303E31F380BFD00C87851 /* ESAMapWeather */,
 				9748A8C81F3081F50043CC3F /* ESAMapPOI */,
 				970952371F305697001899B7 /* ESAMapService */,
 				970952331F3055C7001899B7 /* ESAMapLocation */,
@@ -132,6 +136,15 @@
 				9748A8CA1F3082130043CC3F /* ESAMapPOIManager.m */,
 			);
 			path = ESAMapPOI;
+			sourceTree = "<group>";
+		};
+		978303E31F380BFD00C87851 /* ESAMapWeather */ = {
+			isa = PBXGroup;
+			children = (
+				978303E41F380C2600C87851 /* ESAMapWeatherManager.h */,
+				978303E51F380C2600C87851 /* ESAMapWeatherManager.m */,
+			);
+			path = ESAMapWeather;
 			sourceTree = "<group>";
 		};
 		C9C498E57CF4EDB89D47349C /* Frameworks */ = {
@@ -269,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9709521F1F3051B3001899B7 /* ViewController.m in Sources */,
+				978303E61F380C2600C87851 /* ESAMapWeatherManager.m in Sources */,
 				9709523A1F3056AE001899B7 /* ESAMapService.m in Sources */,
 				970952361F3055C7001899B7 /* ESAMapLocationManager.m in Sources */,
 				9748A8CB1F3082130043CC3F /* ESAMapPOIManager.m in Sources */,
