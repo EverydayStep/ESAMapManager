@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import <AMapSearchKit/AMapSearchKit.h>
+@class ESAMapPOIManager;
+@protocol ESAMapPOIManagerDelegate <NSObject>
+- (void)mapPOIManager:(ESAMapPOIManager *)manager searchRequest:(id)request didFailWithError:(NSError *)error;
+- (void)mapPOIManager:(ESAMapPOIManager *)manager searchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response;
+@end
 
 @interface ESAMapPOIManager : NSObject
+
+@property (nonatomic, weak) id<ESAMapPOIManagerDelegate> delegate;
+
 + (ESAMapPOIManager *)manager;
 
 /**

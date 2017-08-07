@@ -81,11 +81,15 @@
 
 #pragma mark - AMapSearchDelegate
 - (void)AMapSearchRequest:(id)request didFailWithError:(NSError *)error {
-    NSLog(@"%@",error);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(mapPOIManager:searchRequest:didFailWithError:)]) {
+        [self.delegate mapPOIManager:self searchRequest:request didFailWithError:error];
+    }
 }
 
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response {
-    NSLog(@"%@",response);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(mapPOIManager:searchDone:response:)]) {
+        [self.delegate mapPOIManager:self searchDone:request response:response];
+    }
 }
 
 @end
