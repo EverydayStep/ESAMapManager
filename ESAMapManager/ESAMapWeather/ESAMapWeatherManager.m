@@ -7,6 +7,7 @@
 //
 
 #import "ESAMapWeatherManager.h"
+#import <ESUtils/ESUtils.h>
 @interface ESAMapWeatherManager()<AMapSearchDelegate>
 @property (nonatomic, strong) AMapSearchAPI *searchAPI;
 @end
@@ -30,6 +31,9 @@
 }
 #pragma mark - Weather_Methods
 - (void)weatherSearch:(NSString *)city type:(AMapWeatherType)type {
+    if ([ESUtils isEmptyString:city]) {
+        return;
+    }
     AMapWeatherSearchRequest *request = [[AMapWeatherSearchRequest alloc] init];
     request.city = city;
     request.type = type;
