@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ESAMapLocationManager.h"
+#import "ESAMapPOIManager.h"
 
 @interface ViewController ()<ESAMapLocationManagerDelegate>
 
@@ -48,17 +49,23 @@
 //            break;
 //    }
     
-    [ESAMapLocationManager manager].distanceFilter = 0;
-    [ESAMapLocationManager manager].locatingWithReGeocode = YES;
-    [ESAMapLocationManager manager].delegate = self;
-    [[ESAMapLocationManager manager] startContinuousLocation];
+//    [ESAMapLocationManager manager].distanceFilter = 0;
+//    [ESAMapLocationManager manager].locatingWithReGeocode = YES;
+//    [ESAMapLocationManager manager].delegate = self;
+//    [[ESAMapLocationManager manager] startContinuousLocation];
     
-//    [[ESAMapLocationManager manager] singleLocationWithReGeocode:YES success:^(CLLocation *location, AMapLocationReGeocode *regeocode) {
-//        NSLog(@"%@",location);
-//        NSLog(@"%@",regeocode.city);
-//    } fail:^(NSError *error) {
-//        NSLog(@"%@",error);
-//    }];
+    [[ESAMapLocationManager manager] singleLocationWithReGeocode:YES success:^(CLLocation *location, AMapLocationReGeocode *regeocode) {
+        NSLog(@"%@",location);
+        NSLog(@"%@",regeocode.city);
+        AMapGeoPoint *point = [AMapGeoPoint locationWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude];
+        [[ESAMapPOIManager manager] poiSearchAround:point keyword:@"" radius:30000 types:@"学校"];
+        
+    } fail:^(NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+//    [[ESAMapPOIManager manager] poiSearchKeyword:nil city:@"苏州" types:@"学校"];
+    
 }
 
 #pragma mark - ESAMapLocationManagerDelegate

@@ -2,17 +2,21 @@ PODS:
   - AMapFoundation-NO-IDFA (1.4.0)
   - AMapLocation-NO-IDFA (2.4.0):
     - AMapFoundation-NO-IDFA (~> 1.4)
+  - AMapSearch-NO-IDFA (5.2.1):
+    - AMapFoundation-NO-IDFA (~> 1.2)
   - ESUtils (0.0.3)
 
 DEPENDENCIES:
   - AMapLocation-NO-IDFA (= 2.4.0)
+  - AMapSearch-NO-IDFA (~> 5.2.1)
   - ESUtils (~> 0.0.3)
 
 SPEC CHECKSUMS:
   AMapFoundation-NO-IDFA: d1ba541a56737c2048115a745b1dfcbe9901c248
   AMapLocation-NO-IDFA: 9493012d3241a7d551942c7c1e1069b51f295083
+  AMapSearch-NO-IDFA: ec04c2c15ef278803234d959328acda14c2c3c5d
   ESUtils: bdf2ae1d7a257214f0c992c709c995c8b1572ed8
 
-PODFILE CHECKSUM: a857b3a6f44e89675b177fe4db699beb3b9918ec
+PODFILE CHECKSUM: ed5200d50b9654b425893f01dfa4ad75d8fe6af5
 
 COCOAPODS: 1.3.0.rc.1
