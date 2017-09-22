@@ -7,6 +7,6 @@ target 'ESAMapManager' do
 
   # Pods for ESAMapManager
   pod 'AMapLocation-NO-IDFA', '2.4.0'
-  pod 'AMapSearch-NO-IDFA', '~> 5.2.1'
-  pod 'ESUtils', '~> 0.0.3'
+  pod 'AMapSearch-NO-IDFA', '~> 5.3.0’
+  pod 'ESUtils', '~> 0.0.4’
 end

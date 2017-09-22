@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ESAMapManager"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "a map manager for iOS"
 
   # This description is used to generate tags and improve search results.
@@ -146,7 +146,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.dependency "ESUtils", "~> 0.0.3"
+  s.dependency "ESUtils", "~> 0.0.4"
   s.dependency "AMapLocation-NO-IDFA", "2.4.0"
-  s.dependency "AMapSearch-NO-IDFA", "5.2.1"
+  s.dependency "AMapSearch-NO-IDFA", "5.3.0"
 end
